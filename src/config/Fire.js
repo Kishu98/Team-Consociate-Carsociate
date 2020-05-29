@@ -1,7 +1,7 @@
 import firebase from 'firebase';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDbYdDah8T2eH1em1ZWKOtplXg-0EQPUdE",
+    apiKey: { Your api key },
     authDomain: "carsociate.firebaseapp.com",
     databaseURL: "https://carsociate.firebaseio.com",
     projectId: "carsociate",
