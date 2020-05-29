@@ -1,0 +1,9 @@
+.login{
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+}
+
+form {
+    width: 30%;
+}
