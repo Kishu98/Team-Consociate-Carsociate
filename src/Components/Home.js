@@ -20,7 +20,7 @@ class Home extends Component {
             <div>
                 < div className="Home" >
                     <Work />
-                    <MapContainer />
+                    {/* <MapContainer /> */}
                 </div>
                 <button onClick={this.logout}>Log Out</button>
             </div >

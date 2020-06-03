@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
+import Geocode from 'react-geocode';
 
 const mapStyles = {
     width: '100%',
@@ -13,29 +14,45 @@ const containerStyle = {
     overflow: 'hidden'
 }
 
+
+
 export class MapContainer extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            lat: 24.5775,
+            lng: 77.7318
+        }
+    }
+
+    changePos() {
+
+    }
 
     render() {
         return (
-            <Map
-                google={this.props.google}
-                zoom={14}
-                style={mapStyles}
-                containerStyle={containerStyle}
-                initialCenter={{
-                    lat: 22.481308,
-                    lng: 88.309909
-                }}
-            >
-                <Marker
-                    title={'My Home'}
-                    name={'Home'}
-                    position={{ lat: 22.481308, lng: 88.309909 }} />
-            </Map>
+            <div>
+                <Map
+                    google={this.props.google}
+                    zoom={5}
+                    style={mapStyles}
+                    containerStyle={containerStyle}
+                    initialCenter={{ lat: this.state.lat, lng: this.state.lng }}
+                    onClick={this.showPos}
+                >
+                    <Marker
+                        title={'Destination'}
+                        position={{ lat: this.props.toLatitude, lng: this.props.toLongitude }} />
+                    <Marker
+                        title={'From'}
+                        position={{ lat: this.props.fromLatitude, lng: this.props.fromLongitude }} />
+                </Map>
+            </div>
         );
     }
 }
 
 export default GoogleApiWrapper({
-    apiKey: { YourApiKey }
+    apiKey: "AIzaSyBXxOBJn8bxLEXFwqhDjTHGTQYTfEXFl7I"
 })(MapContainer);
+//AIzaSyCv6MKZ_bJIbhkwIx76Gd_pNVcObDoIgSk
