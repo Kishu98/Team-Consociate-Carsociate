@@ -32,7 +32,7 @@ function Work() {
 
     const toSubmit = (e) => {
         e.preventDefault();
-        Geocode.setApiKey("AIzaSyBXxOBJn8bxLEXFwqhDjTHGTQYTfEXFl7I");
+        Geocode.setApiKey(Your_api_key);
         Geocode.enableDebug();
         Geocode.fromAddress(toValue).then(
             response => {
@@ -49,7 +49,7 @@ function Work() {
 
     const fromSubmit = (e) => {
         e.preventDefault();
-        Geocode.setApiKey("AIzaSyBXxOBJn8bxLEXFwqhDjTHGTQYTfEXFl7I");
+        Geocode.setApiKey(Your_api_key);
         Geocode.enableDebug();
         Geocode.fromAddress(fromValue).then(
             response => {

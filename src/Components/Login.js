@@ -46,9 +46,6 @@ class Login extends Component {
                         <label >Name</label>
                         <input value={this.state.name} onChange={this.handleChange} type="text" name="name" className="form-control" placeholder="Enter Name" />
                         <br />
-                        <label >Phone Number</label>
-                        <input value={this.state.pNumber} onChange={this.handleChange} type="number" name="number" className="form-control" placeholder="Phone Number" />
-                        <br />
                         <label for="exampleInputEmail1">Email address</label>
                         <input value={this.state.email} onChange={this.handleChange} type="email" name="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
                     </div>
